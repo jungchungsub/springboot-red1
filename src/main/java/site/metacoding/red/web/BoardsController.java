@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class BoardsController {
-
-	@GetMapping("/boards")
+ 
+	@GetMapping("/boards") //메인페이지
 	public String getBoardList() {
 		return "boards/main";
 	}
 	
-	@GetMapping("/boards/{id}")
+	@GetMapping("/boards/{id}") //상세페이지
 	public String getBoardList(@PathVariable Integer id) {
 		return "boards/detail";
 	}
